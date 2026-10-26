@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="360" viewBox="0 0 320 360">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2b0638"/>
+      <stop offset="50%" stop-color="#610c5f"/>
+      <stop offset="100%" stop-color="#140326"/>
+    </linearGradient>
+    <linearGradient id="hairGold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff099"/>
+      <stop offset="50%" stop-color="#ffd700"/>
+      <stop offset="100%" stop-color="#cc8800"/>
+    </linearGradient>
+    <linearGradient id="bathWater" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff66ee"/>
+      <stop offset="50%" stop-color="#cc33ff"/>
+      <stop offset="100%" stop-color="#00ffcc"/>
+    </linearGradient>
+    <radialGradient id="felEye" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ccffdd"/>
+      <stop offset="45%" stop-color="#00ff66"/>
+      <stop offset="100%" stop-color="#006622"/>
+    </radialGradient>
+    <radialGradient id="cameraFlash" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="35%" stop-color="#ffffcc" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#ff00aa" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background Silvermoon Bedroom / Hot Tub Vibe -->
+  <rect width="320" height="360" fill="url(#bgGrad)"/>
+
+  <!-- Checkerboard Emo Wall Trim -->
+  <g opacity="0.22">
+    <rect x="0" y="0" width="320" height="40" fill="#000"/>
+    <path d="M0,0 H40 V20 H0 Z M80,0 H120 V20 H80 Z M160,0 H200 V20 H160 Z M240,0 H280 V20 H240 Z M40,20 H80 V40 H40 Z M120,20 H160 V40 H120 Z M200,20 H240 V40 H200 Z M280,20 H320 V40 H280 Z" fill="#ff007f"/>
+  </g>
+
+  <!-- Arcane Runes in background -->
+  <circle cx="160" cy="155" r="115" fill="none" stroke="#ff33cc" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.5">
+    <animateTransform attributeName="transform" type="rotate" from="0 160 155" to="360 160 155" dur="20s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="160" cy="155" r="98" fill="none" stroke="#00ffcc" stroke-width="1" stroke-dasharray="3 6" opacity="0.5">
+    <animateTransform attributeName="transform" type="rotate" from="360 160 155" to="0 160 155" dur="14s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Back Hair -->
+  <path d="M75,90 C50,150 45,250 60,330 L260,330 C275,250 270,150 245,90 Z" fill="url(#hairGold)" stroke="#4a0e4e" stroke-width="2.5"/>
+  <!-- Pink Scene Coontail Streaks -->
+  <path d="M68,170 L88,175 L76,295 L56,290 Z" fill="#ff007f"/>
+  <path d="M64,190 H86 M62,215 H84 M60,240 H82 M58,265 H80" stroke="#111111" stroke-width="6"/>
+  <path d="M235,175 L255,170 L264,290 L244,295 Z" fill="#00ffcc"/>
+  <path d="M236,190 H258 M238,215 H260 M240,240 H262 M242,265 H264" stroke="#111111" stroke-width="6"/>
+
+  <!-- Long Blood Elf Ears (Pointed High!) -->
+  <path d="M88,145 L18,92 L45,155 L88,168 Z" fill="#ffd6e7" stroke="#b35977" stroke-width="2"/>
+  <path d="M30,104 L65,148" stroke="#e699b8" stroke-width="1.5"/>
+  <!-- Ear Piercings -->
+  <circle cx="32" cy="108" r="5" fill="none" stroke="#ffd700" stroke-width="2.5"/>
+  <circle cx="44" cy="126" r="4" fill="none" stroke="#00ffcc" stroke-width="2"/>
+
+  <path d="M232,145 L302,92 L275,155 L232,168 Z" fill="#ffd6e7" stroke="#b35977" stroke-width="2"/>
+  <path d="M290,104 L255,148" stroke="#e699b8" stroke-width="1.5"/>
+  <circle cx="288" cy="108" r="5" fill="none" stroke="#ffd700" stroke-width="2.5"/>
+  <circle cx="276" cy="126" r="4" fill="none" stroke="#ff007f" stroke-width="2"/>
+
+  <!-- Shoulders & Silvermoon Robe / Scene Hoodie -->
+  <path d="M70,340 C75,265 110,250 160,250 C210,250 245,265 250,340 Z" fill="#800040" stroke="#ffd700" stroke-width="3"/>
+  <!-- Golden Pauldrons -->
+  <path d="M55,285 Q85,245 120,268 Q85,295 55,285 Z" fill="#ffd700" stroke="#ff007f" stroke-width="2"/>
+  <circle cx="88" cy="270" r="8" fill="#00ff66" stroke="#ffffff" stroke-width="1.5"/>
+  <path d="M265,285 Q235,245 200,268 Q235,295 265,285 Z" fill="#ffd700" stroke="#ff007f" stroke-width="2"/>
+  <circle cx="232" cy="270" r="8" fill="#00ff66" stroke="#ffffff" stroke-width="1.5"/>
+
+  <!-- Neck & Choker -->
+  <rect x="142" y="212" width="36" height="45" rx="10" fill="#ffe0ee" stroke="#b35977" stroke-width="2"/>
+  <rect x="140" y="232" width="40" height="9" fill="#111111" stroke="#ff007f" stroke-width="1"/>
+  <circle cx="150" cy="236.5" r="2" fill="#ffffff"/>
+  <circle cx="160" cy="236.5" r="2.5" fill="#00ffcc"/>
+  <circle cx="170" cy="236.5" r="2" fill="#ffffff"/>
+
+  <!-- Head / Face (Classic MySpace High-Angle Tilt) -->
+  <path d="M100,125 C100,85 220,85 220,125 C220,180 190,222 160,226 C130,222 100,180 100,125 Z" fill="#ffe0ee" stroke="#b35977" stroke-width="2"/>
+
+  <!-- Blush -->
+  <ellipse cx="122" cy="172" rx="14" ry="7" fill="#ff66b3" opacity="0.45"/>
+  <ellipse cx="198" cy="172" rx="14" ry="7" fill="#ff66b3" opacity="0.45"/>
+
+  <!-- Glowing Fel-Green Blood Elf Eyes + Thick 2007 Emo Eyeliner -->
+  <g>
+    <!-- Left Eye -->
+    <path d="M110,148 Q128,134 146,150 Q128,162 110,148 Z" fill="#0a2912" stroke="#000000" stroke-width="4"/>
+    <circle cx="129" cy="148" r="9" fill="url(#felEye)"/>
+    <circle cx="126" cy="145" r="3" fill="#ffffff"/>
+    <!-- Eyeliner Wing -->
+    <path d="M110,148 L98,139 L115,143 Z" fill="#000000"/>
+    <!-- Right Eye -->
+    <path d="M174,150 Q192,134 210,148 Q192,162 174,150 Z" fill="#0a2912" stroke="#000000" stroke-width="4"/>
+    <circle cx="191" cy="148" r="9" fill="url(#felEye)"/>
+    <circle cx="188" cy="145" r="3" fill="#ffffff"/>
+    <path d="M210,148 L222,139 L205,143 Z" fill="#000000"/>
+  </g>
+
+  <!-- Long Blood Elf Eyebrows (Pierced!) -->
+  <path d="M138,134 L82,105" stroke="#cc8800" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M182,134 L238,105" stroke="#cc8800" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- Nose & Glossy Smirk + Lip Ring -->
+  <path d="M158,166 L154,176 L163,178" fill="none" stroke="#cc6688" stroke-width="2" stroke-linecap="round"/>
+  <path d="M144,194 Q160,188 176,194 Q160,208 144,194 Z" fill="#ff007f" stroke="#800040" stroke-width="1.5"/>
+  <path d="M152,197 Q160,201 168,197" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+  <!-- Snakebite Lip Ring -->
+  <circle cx="171" cy="200" r="3.5" fill="none" stroke="#e6e6e6" stroke-width="2"/>
+
+  <!-- Sweeping Side-Bangs (2007 Scene Hair) -->
+  <path d="M92,115 C110,60 215,60 232,120 C195,120 145,148 100,165 C94,142 90,128 92,115 Z" fill="url(#hairGold)" stroke="#4a0e4e" stroke-width="2"/>
+  <path d="M115,92 C145,98 175,118 212,126 L195,134 C162,125 130,115 105,108 Z" fill="#ff007f"/>
+  <!-- Hair Bow / Tiara -->
+  <polygon points="145,76 160,52 175,76" fill="#ffd700" stroke="#ff007f" stroke-width="2"/>
+  <circle cx="160" cy="69" r="5" fill="#00ff66"/>
+
+  <!-- Glowing Jar of "BLOOD ELF BATH WATER" Held Up Front -->
+  <g transform="translate(85, 240)">
+    <!-- Jar Body -->
+    <rect x="20" y="18" width="110" height="82" rx="16" fill="#ffffff" fill-opacity="0.25" stroke="#00ffcc" stroke-width="3"/>
+    <!-- Bubbling Liquid Inside -->
+    <path d="M23,42 Q50,34 75,42 T127,42 L127,86 C127,94 120,97 112,97 L38,97 C30,97 23,94 23,86 Z" fill="url(#bathWater)" opacity="0.9"/>
+    <!-- Cork & Gold Lid -->
+    <rect x="42" y="6" width="66" height="14" rx="4" fill="#ffd700" stroke="#ff007f" stroke-width="2"/>
+    <!-- Bubbles -->
+    <circle cx="42" cy="75" r="5" fill="#ffffff" opacity="0.7">
+      <animate attributeName="cy" values="85;45;85" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="105" cy="65" r="4" fill="#00ffcc" opacity="0.8">
+      <animate attributeName="cy" values="88;42;88" dur="1.9s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Jar Label -->
+    <rect x="28" y="48" width="94" height="38" rx="4" fill="#1a0526" stroke="#ffd700" stroke-width="1.5"/>
+    <text x="75" y="63" font-family="Verdana, sans-serif" font-size="9.5" font-weight="bold" fill="#ff66cc" text-anchor="middle">★ BLOOD ELF ★</text>
+    <text x="75" y="76" font-family="Verdana, sans-serif" font-size="10" font-weight="bold" fill="#00ffcc" text-anchor="middle">BATH WATER™</text>
+    <text x="75" y="84" font-family="Tahoma, sans-serif" font-size="6" fill="#ffd700" text-anchor="middle">100% PURE SUNWELL</text>
+  </g>
+
+  <!-- 2007 Digital Camera Mirror Flash Flare -->
+  <circle cx="255" cy="70" r="48" fill="url(#cameraFlash)">
+    <animate attributeName="r" values="42;54;42" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <line x1="215" y1="70" x2="295" y2="70" stroke="#ffffff" stroke-width="2.5"/>
+  <line x1="255" y1="30" x2="255" y2="110" stroke="#ffffff" stroke-width="2.5"/>
+
+  <!-- Glitter Stars -->
+  <g fill="#ffffff">
+    <polygon points="40,50 43,58 51,61 43,64 40,72 37,64 29,61 37,58">
+      <animate attributeName="opacity" values="1;0.2;1" dur="1.2s" repeatCount="indefinite"/>
+    </polygon>
+    <polygon points="280,190 283,198 291,201 283,204 280,212 277,204 269,201 277,198" fill="#00ffcc">
+      <animate attributeName="opacity" values="0.2;1;0.2" dur="1.5s" repeatCount="indefinite"/>
+    </polygon>
+    <polygon points="35,220 38,226 44,229 38,232 35,238 32,232 26,229 32,226" fill="#ff66cc">
+      <animate attributeName="opacity" values="1;0.3;1" dur="0.9s" repeatCount="indefinite"/>
+    </polygon>
+  </g>
+
+  <!-- Glitter Border & Blingee Watermark -->
+  <rect x="3" y="3" width="314" height="354" fill="none" stroke="#ff007f" stroke-width="6"/>
+  <rect x="6" y="6" width="308" height="348" fill="none" stroke="#00ffcc" stroke-width="2" stroke-dasharray="6 4"/>
+  <rect x="216" y="338" width="96" height="15" fill="#000000" opacity="0.75"/>
+  <text x="264" y="349" font-family="Comic Sans MS, cursive, sans-serif" font-size="9" font-weight="bold" fill="#ff66cc" text-anchor="middle">✨ Blingee.com ✨</text>
+</svg>

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MySpace.com - Blood Elf Bath Water - 9,000 - Magical - SILVERMOON CITY, Azeroth - www.myspace.com/bloodelfbathwater</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Sparkle Cursor Trail Container -->
+  <div id="cursor-trail-container" aria-hidden="true"></div>
+
+  <!-- Browser Autoplay Unlocker Banner (only shown if browser blocks initial unmuted autoplay) -->
+  <div id="autoplay-unlock-banner" class="autoplay-banner hidden">
+    <span>🔊 <b>2007 MySpace Music Player:</b> Your browser paused unmuted auto-play! <u>Click anywhere on the page</u> to blast <b>"Crying in the Sunwell"</b>! 🎶✨</span>
+    <button id="autoplay-unlock-btn" type="button">▶ BLAST SONG NOW!!</button>
+  </div>
+
+  <!-- Classic MySpace Top Navigation Header -->
+  <header class="myspace-top-header">
+    <div class="myspace-top-row">
+      <div class="myspace-brand">
+        <a href="https://discord.gg/9dJz8JSnp4" target="_blank" rel="noopener noreferrer" class="myspace-logo discord-link">MySpace.com</a>
+        <span class="pipe">|</span>
+        <a href="https://discord.gg/9dJz8JSnp4" target="_blank" rel="noopener noreferrer" class="discord-link">Home</a>
+      </div>
+      <form class="myspace-search-form" id="myspace-search-form">
+        <label>The Web</label>
+        <input type="radio" name="scope" />
+        <label>MySpace</label>
+        <input type="radio" name="scope" checked />
+        <input type="text" name="q" placeholder="Search Silvermoon / MySpace..." />
+        <button type="submit">Search</button>
+      </form>
+      <div class="myspace-top-links">
+        <a href="https://discord.gg/9dJz8JSnp4" target="_blank" rel="noopener noreferrer" class="discord-link">Help</a>
+        <span class="pipe">|</span>
+        <a href="https://discord.gg/9dJz8JSnp4" target="_blank" rel="noopener noreferrer" class="discord-link">SignOut</a>
+      </div>
+    </div>
+
+    <nav class="myspace-sub-nav" aria-label="MySpace Classic Navigation">
+      <a href="#top">Home</a><span>|</span>
+      <a href="#top8-section">Browse</a><span>|</span>
+      <a href="#quiz-section">Quiz</a><span>|</span>
+      <a href="#wall-section">Wall</a><span>|</span>
+      <a href="#music-player-box">Music</a><span>|</span>
+      <a href="#blog-section">Blog</a><span>|</span>
+      <a href="#blurb-section">Blurbs</a><span>|</span>
+      <a href="#comment-form-box">Add Comment</a><span>|</span>
+      <a href="#top" onclick="window.triggerBirthdayConfetti(); return false;">🎂 Birthday Mode</a>
+    </nav>
+  </header>
+
+  <!-- Scrolling 2000s Marquee Banner -->
+  <div class="marquee-wrapper">
+    <div class="marquee-track" id="profile-marquee">
+      ★·.·´¯`·.·★ WELCOME 2 BLOOD ELF BATH WATER'S MYSPACE!! ★·.·´¯`·.·★
+    </div>
+  </div>
+
+  <!-- Main MySpace 2-Column Profile Wrapper -->
+  <main class="myspace-container" id="top">
+    <div class="profile-grid">
+
+      <!-- ================================================================ -->
+      <!-- LEFT COLUMN: Profile Pic, Contact Box, URL, Music, Interests     -->
+      <!-- ================================================================ -->
+      <aside class="left-column">
+
+        <!-- Profile Summary Card -->
+        <section class="myspace-box profile-card-box">
+          <h1 class="profile-name" id="profile-name">Blood Elf Bath Water</h1>
+
+          <div class="profile-main-info">
+            <div class="profile-pic-wrapper">
+              <a href="https://discord.gg/9dJz8JSnp4" target="_blank" rel="noopener noreferrer" class="discord-link">
+                <img id="profile-pic" src="assets/profile/bebw.png" alt="Blood Elf Bath Water Profile Pic" />
+              </a>
+              <div class="pic-caption" id="profile-pic-caption"></div>
+              <div class="view-my-links">
+                View My:
+                <a href="https://discord.gg/9dJz8JSnp4" target="_blank" rel="noopener noreferrer" class="discord-link">Pics</a> |
+                <a href="https://discord.gg/9dJz8JSnp4" target="_blank" rel="noopener noreferrer" class="discord-link">Videos</a> |
+                <a href="#quiz-section">Quiz</a>
+              </div>
+            </div>
+
+            <div class="profile-stats">
+              <p class="profile-headline" id="profile-headline"></p>
+              <ul class="stats-list">
+                <li><span id="profile-gender"></span></li>
+                <li><span id="profile-age"></span> years old</li>
+                <li><span id="profile-city"></span>,</li>
+                <li><span id="profile-region"></span></li>
+                <li><span id="profile-country"></span></li>
+              </ul>
+
+              <!-- Classic Blinking ONLINE NOW Indicator -->
+              <div id="online-now-badge" class="online-now-badge">
+                <span class="online-person-icon">🧍‍♀️</span>
+                <span class="online-text">ONLINE NOW!</span>
+              </div>
+
+              <div class="last-login-block">
+                <div><b>Mood:</b> <span id="profile-mood"></span></div>
+                <div><b>Last Login:</b> <span id="profile-last-login"></span></div>
+                <div><b>Profile Views:</b> <span id="profile-views"></span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Contacting Blood Elf Bath Water Box -->
+        <section class="myspace-box contact-box">
+          <div class="box-header" id="contact-box-header">Contacting Blood Elf Bath Water</div>
+          <div class="contact-grid">
+            <a href="https://discord.gg/9dJz8JSnp4" target="_blank" rel="noopener noreferrer" class="contact-btn discord-link">
+              ✉️ Send Message
+            </a>
+            <a href="https://discord.gg/9dJz8JSnp4" target="_blank" rel="noopener noreferrer" class="contact-btn discord-link">
+              ⏩ Forward to Friend
+            </a>
+            <a href="https://discord.gg/9dJz8JSnp4" target="_blank" rel="noopener noreferrer" class="contact-btn discord-link">
+              ➕ Add to Friends
+            </a>
+            <a href="https://discord.gg/9dJz8JSnp4" target="_blank" rel="noopener noreferrer" class="contact-btn discord-link">
+              ⭐ Add to Favorites
+            </a>
+            <a href="https://discord.gg/9dJz8JSnp4" target="_blank" rel="noopener noreferrer" class="contact-btn discord-link">
+              💬 Instant Message
+            </a>
+            <a href="https://discord.gg/9dJz8JSnp4" target="_blank" rel="noopener noreferrer" class="contact-btn discord-link">
+              🚫 Block User
+            </a>
+            <a href="https://discord.gg/9dJz8JSnp4" target="_blank" rel="noopener noreferrer" class="contact-btn discord-link">
+              👥 Add to Group
+            </a>
+            <a href="https://discord.gg/9dJz8JSnp4" target="_blank" rel="noopener noreferrer" class="contact-btn discord-link">
+              👑 Rank User
+            </a>
+          </div>
+        </section>
+
+        <!-- MySpace URL Box -->
+        <section class="myspace-box url-box">
+          <div class="url-title"><b>MySpace URL:</b></div>
+          <div class="url-value">
+            <a id="profile-url" href="https://discord.gg/9dJz8JSnp4" target="_blank" rel="noopener noreferrer" class="discord-link">http://www.myspace.com/bloodelfbathwater</a>
+          </div>
+        </section>
+
+        <!-- 2006 MySpace Music Player -->
+        <section class="myspace-box music-player-box" id="music-player-box">
+          <div class="music-player-chrome">
+            <div class="player-top-row">
+              <div class="player-display">
+                <div class="player-status-line">
+                  <span id="player-state-badge" class="player-badge">PLAYING</span>
+                  <span id="player-time">0:00 / 0:10</span>
+                </div>
+                <div class="player-song-marquee">
+                  <span id="player-now-playing">Loading track...</span>
+                </div>
+                <div class="player-artist-line">
+                  Artist: <b id="player-artist-name">Blood Elf Bath Water</b> • Plays: <span id="player-plays-count">694,208</span>
+                </div>
+                <!-- Equalizer Bars -->
+                <div class="eq-bars" id="eq-bars">
+                  <span></span><span></span><span></span><span></span><span></span><span></span>
+                  <span></span><span></span><span></span><span></span><span></span><span></span>
+                  <span></span><span></span><span></span><span></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="player-controls-row">
+              <button type="button" id="btn-prev" class="mp-btn" title="Previous Track">⏮</button>
+              <button type="button" id="btn-play" class="mp-btn mp-btn-primary" title="Play">▶</button>
+              <button type="button" id="btn-pause" class="mp-btn" title="Pause">⏸</button>
+              <button type="button" id="btn-stop" class="mp-btn" title="Stop">⏹</button>
+              <button type="button" id="btn-next" class="mp-btn" title="Next Track">⏭</button>
+              <div class="volume-control">
+                <span title="Volume">🔊</span>
+                <input type="range" id="volume-slider" min="0" max="1" step="0.05" value="0.25" aria-label="Music Volume" />
+              </div>
+            </div>
+
+            <div class="player-playlist" id="player-playlist"></div>
+            <audio id="myspace-audio" preload="auto"></audio>
+          </div>
+        </section>
+
+        <!-- Interests Table -->
+        <section class="myspace-box interests-box">
+          <div class="box-header" id="interests-header">Blood Elf Bath Water's Interests</div>
+          <table class="myspace-table" id="interests-table">
+            <tbody></tbody>
+          </table>
+        </section>
+
+        <!-- Details Table -->
+        <section class="myspace-box details-box">
+          <div class="box-header" id="details-header">Blood Elf Bath Water's Details</div>
+          <table class="myspace-table" id="details-table">
+            <tbody></tbody>
+          </table>
+        </section>
+
+        <!-- Schools Table -->
+        <section class="myspace-box schools-box">
+          <div class="box-header" id="schools-header">Blood Elf Bath Water's Schools</div>
+          <table class="myspace-table" id="schools-table">
+            <tbody></tbody>
+          </table>
+        </section>
+
+      </aside>
+
+      <!-- ================================================================ -->
+      <!-- RIGHT COLUMN: Network Banner, Blog, Blurbs, Quiz, Top 8, Wall    -->
+      <!-- ================================================================ -->
+      <div class="right-column">
+
+        <!-- Extended Network Banner -->
+        <div class="extended-network-banner">
+          <a href="https://discord.gg/9dJz8JSnp4" target="_blank" rel="noopener noreferrer" class="discord-link extended-network-link" id="extended-network-text">Blood Elf Bath Water is in your extended network</a>
+        </div>
+
+        <!-- Latest Blog Entry -->
+        <section class="myspace-box blog-box" id="blog-section">
+          <div class="blog-header">
+            <b id="blog-header-title">Blood Elf Bath Water's Latest Blog Entry</b>
+            <a href="https://discord.gg/9dJz8JSnp4" target="_blank" rel="noopener noreferrer" class="discord-link">[Subscribe to this Blog]</a>
+          </div>
+          <ul class="blog-list" id="blog-list"></ul>
+          <div class="blog-footer">
+            <a href="https://discord.gg/9dJz8JSnp4" target="_blank" rel="noopener noreferrer" class="discord-link">[View All Blog Entries]</a>
+          </div>
+        </section>
+
+        <!-- Blurbs (About Me & Who I'd Like to Meet) -->
+        <section class="myspace-box blurbs-box" id="blurb-section">
+          <div class="box-header orange-header" id="blurbs-header">Blood Elf Bath Water's Blurbs</div>
+          <div class="blurb-content">
+            <h3 class="blurb-subtitle">About me:</h3>
+            <div id="about-me-content" class="blurb-body"></div>
+
+            <h3 class="blurb-subtitle">Who I'd like to meet:</h3>
+            <div id="who-to-meet-content" class="blurb-body"></div>
+          </div>
+        </section>
+
+        <!-- Interactive 2000s Personality Quiz Section -->
+        <section class="myspace-box quiz-box" id="quiz-section">
+          <div class="box-header quiz-header">
+            <span id="quiz-title">✨ Which Vintage of Blood Elf Bath Water Are You? ✨</span>
+          </div>
+          <div class="quiz-body">
+            <p class="quiz-subtitle" id="quiz-subtitle"></p>
+            <form id="personality-quiz-form">
+              <div id="quiz-questions-container"></div>
+              <div class="quiz-actions">
+                <button type="submit" class="retro-action-btn">🔮 Reveal My Bath Water Vintage!!</button>
+                <button type="button" id="quiz-reset-btn" class="retro-secondary-btn">↺ Reset Quiz</button>
+              </div>
+            </form>
+
+            <!-- Quiz Result Card -->
+            <div id="quiz-result-box" class="quiz-result-box hidden">
+              <div class="quiz-result-header">★ YOUR OFFICIAL 2007 MYSPACE QUIZ RESULT ★</div>
+              <h4 id="quiz-result-title" class="quiz-result-title"></h4>
+              <div class="quiz-result-content">
+                <img id="quiz-result-gif" src="" alt="Quiz Result Badge" class="quiz-badge-img" />
+                <p id="quiz-result-desc"></p>
+              </div>
+              <div class="quiz-embed-block">
+                <label for="quiz-html-code">📋 Copy &amp; Paste this HTML into your MySpace "About Me" or post it to the Wall below:</label>
+                <textarea id="quiz-html-code" rows="3" readonly></textarea>
+                <div class="quiz-embed-btns">
+                  <button type="button" id="copy-quiz-html-btn" class="retro-secondary-btn">📋 Copy HTML Code</button>
+                  <button type="button" id="post-quiz-to-wall-btn" class="retro-action-btn">📌 Post My Result to the Wall!</button>
+                  <a href="https://discord.gg/9dJz8JSnp4" target="_blank" rel="noopener noreferrer" class="retro-action-btn discord-link" style="text-decoration:none;">💬 Share Result in Discord!</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Friend Space (Top 8) -->
+        <section class="myspace-box friends-box" id="top8-section">
+          <div class="box-header orange-header" id="friends-header">Blood Elf Bath Water's Friend Space</div>
+          <div class="friends-subheader">
+            <span><b id="friends-owner-name">Blood Elf Bath Water</b> has <span class="count-highlight" id="friends-count">420</span> friends.</span>
+            <button type="button" id="shuffle-top8-btn" class="mini-retro-btn" title="Shuffle Top 8 order and start 2007 MySpace drama!">🔀 Shuffle Top 8</button>
+          </div>
+          <div class="top8-grid" id="top8-grid"></div>
+          <div class="view-all-friends">
+            <a href="https://discord.gg/9dJz8JSnp4" target="_blank" rel="noopener noreferrer" class="discord-link">View All of <span class="owner-name-inline">Blood Elf Bath Water</span>'s Friends</a>
+          </div>
+        </section>
+
+        <!-- Friends Comments (The Wall - with Happy Birthday Post & Random GIF Posts!) -->
+        <section class="myspace-box comments-box" id="wall-section">
+          <div class="box-header orange-header" id="comments-header">Blood Elf Bath Water's Friends Comments</div>
+          <div class="comments-subheader">
+            <span>Displaying <span class="count-highlight" id="displayed-comments-count">6</span> of <span class="count-highlight" id="total-comments-count">69</span> comments (<a href="https://discord.gg/9dJz8JSnp4" target="_blank" rel="noopener noreferrer" class="discord-link">View/Edit All Comments</a>)</span>
+            <div class="comments-toolbar">
+              <button type="button" id="shuffle-wall-gifs-btn" class="mini-retro-btn" title="Pick fresh random GIFs from config.js randomGifPool">🎲 Randomize Wall GIFs</button>
+              <a href="#comment-form-box" class="mini-retro-btn">✍️ Add Comment</a>
+            </div>
+          </div>
+
+          <!-- Wall Posts Table -->
+          <table class="comments-table" id="wall-comments-table">
+            <tbody id="wall-comments-tbody"></tbody>
+          </table>
+
+          <!-- Interactive "Leave a Wall Comment / GIF" Box -->
+          <div class="add-comment-box" id="comment-form-box">
+            <h4>💬 Leave a Comment &amp; GIF on <span class="owner-name-inline">Blood Elf Bath Water</span>'s Wall!</h4>
+            <form id="add-comment-form">
+              <div class="form-row">
+                <label for="comment-author">Your 2007 ScreenName:</label>
+                <input type="text" id="comment-author" value="xX_AzerothSceneKid_Xx" required />
+              </div>
+              <div class="form-row">
+                <label for="comment-gif-select">Attach Animated GIF:</label>
+                <select id="comment-gif-select">
+                  <option value="random">🎲 Pick a Random GIF from Pool!</option>
+                  <option value="assets/gifs/happy-birthday.gif">🎂 Happy Birthday Glitter Banner</option>
+                  <option value="assets/gifs/birthday-cake.gif">🕯️ Make a Mana Wish Cake</option>
+                  <option value="assets/gifs/mana-potion.gif">💧 100% Pure Sunwell Bath Water</option>
+                  <option value="assets/gifs/thanks-for-add.gif">💖 THANKS 4 THE ADD!!</option>
+                  <option value="assets/gifs/rawr-xd.gif">🦖 RAWR xD (Dinosaur Love)</option>
+                  <option value="assets/gifs/dancing-elf.gif">💃 AFK Mailbox Dance Party</option>
+                  <option value="assets/gifs/party-cat.gif">😎 Vibing Party Cat</option>
+                </select>
+                <label class="bday-checkbox-label">
+                  <input type="checkbox" id="comment-is-birthday" />
+                  🎂 Make this a Happy Birthday Post!
+                </label>
+              </div>
+              <div class="form-row">
+                <label for="comment-text">Your Wall Message:</label>
+                <textarea id="comment-text" rows="2" placeholder="hiiiii!! happy birthday blood elf bath water!! thx 4 the add xoxo <333" required></textarea>
+              </div>
+              <div class="form-actions">
+                <button type="submit" class="retro-action-btn">✨ Post Comment to Wall ✨</button>
+              </div>
+            </form>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Classic MySpace Footer -->
+  <footer class="myspace-footer">
+    <div class="footer-links">
+      <a href="https://discord.gg/9dJz8JSnp4" target="_blank" rel="noopener noreferrer" class="discord-link">About</a> |
+      <a href="https://discord.gg/9dJz8JSnp4" target="_blank" rel="noopener noreferrer" class="discord-link">FAQ</a> |
+      <a href="https://discord.gg/9dJz8JSnp4" target="_blank" rel="noopener noreferrer" class="discord-link">Terms</a> |
+      <a href="https://discord.gg/9dJz8JSnp4" target="_blank" rel="noopener noreferrer" class="discord-link">Privacy</a> |
+      <a href="https://discord.gg/9dJz8JSnp4" target="_blank" rel="noopener noreferrer" class="discord-link">Safety Tips</a> |
+      <a href="https://discord.gg/9dJz8JSnp4" target="_blank" rel="noopener noreferrer" class="discord-link">Contact MySpace</a> |
+      <a href="https://discord.gg/9dJz8JSnp4" target="_blank" rel="noopener noreferrer" class="discord-link">Promote!</a> |
+      <a href="https://discord.gg/9dJz8JSnp4" target="_blank" rel="noopener noreferrer" class="discord-link">Advertise</a>
+    </div>
+    <p>©2003-2007 MySpace.com &amp; Blood Elf Bath Water Enterprises (Silvermoon City). All Rights Reserved.</p>
+  </footer>
+
+  <!-- Retro Alert Toast Box -->
+  <div id="retro-toast" class="retro-toast hidden"></div>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

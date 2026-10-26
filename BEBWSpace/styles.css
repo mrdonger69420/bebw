@@ -1,0 +1,1134 @@
+/* ==========================================================================
+   MYSPACE 2007 CUSTOMIZED PROFILE STYLESHEET - "Blood Elf Bath Water"
+   Theme colors are dynamically synced from `config.js` via CSS Variables!
+   ========================================================================== */
+
+:root {
+  --page-bg: #0d0417;
+  --card-bg: #160826;
+  --card-alt-bg: #210c38;
+  --header-bar-bg: #4a0e4e;
+  --section-header-bg: #ff007f;
+  --section-header-text: #ffffff;
+  --border-color: #ff33cc;
+  --secondary-border-color: #00ffcc;
+  --text-color: #f5e6ff;
+  --muted-text-color: #c499ff;
+  --link-color: #00ffcc;
+  --link-hover-color: #ff66cc;
+  --accent-gold: #ffd700;
+  --custom-cursor: url("assets/cursors/pixel-sword.svg") 4 4, auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--page-bg);
+  /* Classic 2007 tiled starry + arcane diagonal stripe MySpace background */
+  background-image:
+    radial-gradient(circle at 18% 22%, rgba(255, 0, 127, 0.22) 0%, transparent 28%),
+    radial-gradient(circle at 82% 14%, rgba(0, 255, 204, 0.18) 0%, transparent 25%),
+    radial-gradient(circle at 50% 80%, rgba(255, 215, 0, 0.14) 0%, transparent 32%),
+    radial-gradient(#ffffff 1px, transparent 1px),
+    radial-gradient(#ff66cc 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 50px 50px, 80px 80px;
+  background-position: 0 0, 0 0, 0 0, 0 0, 25px 25px;
+  background-attachment: fixed;
+  color: var(--text-color);
+  font-family: Verdana, Tahoma, Arial, sans-serif;
+  font-size: 11px;
+  line-height: 1.45;
+  cursor: var(--custom-cursor);
+}
+
+a, button, input, select, textarea, label {
+  cursor: var(--custom-cursor);
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+  text-shadow: 0 0 6px var(--link-hover-color);
+  text-decoration: none;
+}
+
+/* Custom 2007 Neon Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: #12041f;
+  border-left: 1px solid var(--border-color);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--section-header-bg), #7b1fa2, var(--secondary-border-color));
+  border: 1px solid #ffffff;
+}
+
+/* ==========================================================================
+   CURSOR SPARKLE TRAIL
+   ========================================================================== */
+#cursor-trail-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.cursor-sparkle {
+  position: absolute;
+  pointer-events: none;
+  font-size: 14px;
+  font-weight: bold;
+  user-select: none;
+  animation: sparkleFall 850ms ease-out forwards;
+}
+
+@keyframes sparkleFall {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, 28px) scale(0.3) rotate(140deg);
+  }
+}
+
+/* ==========================================================================
+   AUTOPLAY UNLOCK BANNER
+   ========================================================================== */
+.autoplay-banner {
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+  background: linear-gradient(90deg, #ff007f, #7b1fa2, #00bfa5);
+  color: #ffffff;
+  border-bottom: 2px solid var(--accent-gold);
+  padding: 7px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  font-size: 11px;
+  box-shadow: 0 3px 15px rgba(255, 0, 127, 0.7);
+}
+
+.autoplay-banner button {
+  background: var(--accent-gold);
+  color: #1a002c;
+  font-family: Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 11px;
+  border: 2px outset #ffffff;
+  padding: 3px 10px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* ==========================================================================
+   CLASSIC MYSPACE TOP HEADER BAR
+   ========================================================================== */
+.myspace-top-header {
+  max-width: 860px;
+  margin: 0 auto;
+  background: #003399;
+  border: 2px solid var(--border-color);
+  border-top: none;
+  box-shadow: 0 0 18px rgba(255, 51, 204, 0.45);
+}
+
+.myspace-top-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+  background: linear-gradient(180deg, #1b3b88 0%, #2d0845 100%);
+  color: #ffffff;
+}
+
+.myspace-logo {
+  font-family: Tahoma, Verdana, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: -0.5px;
+}
+
+.pipe {
+  margin: 0 5px;
+  color: #ff99dd;
+}
+
+.myspace-search-form {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+}
+
+.myspace-search-form input[type="text"] {
+  background: #ffffff;
+  color: #000000;
+  border: 1px inset #888;
+  padding: 2px 5px;
+  font-size: 11px;
+  width: 150px;
+}
+
+.myspace-search-form button,
+.config-pill-btn {
+  background: linear-gradient(180deg, #ff66cc, #cc0066);
+  color: #ffffff;
+  border: 1px outset #ffffff;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 2px 7px;
+}
+
+.myspace-sub-nav {
+  background: var(--header-bar-bg);
+  border-top: 1px solid var(--border-color);
+  padding: 4px 8px;
+  text-align: center;
+  font-size: 10px;
+}
+
+.myspace-sub-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: normal;
+  margin: 0 3px;
+}
+
+.myspace-sub-nav a:hover {
+  color: var(--accent-gold);
+  text-decoration: underline;
+}
+
+.myspace-sub-nav span {
+  color: var(--border-color);
+}
+
+/* ==========================================================================
+   SCROLLING MARQUEE BANNER
+   ========================================================================== */
+.marquee-wrapper {
+  max-width: 860px;
+  margin: 8px auto;
+  background: #140224;
+  border: 2px dashed var(--secondary-border-color);
+  padding: 5px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  box-shadow: 0 0 10px rgba(0, 255, 204, 0.35);
+}
+
+.marquee-track {
+  display: inline-block;
+  padding-left: 100%;
+  font-family: "Comic Sans MS", Tahoma, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--accent-gold);
+  text-shadow: 0 0 6px #ff007f;
+  animation: marqueeScroll 20s linear infinite;
+}
+
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* ==========================================================================
+   MAIN 2-COLUMN MYSPACE PROFILE TABLE / GRID
+   ========================================================================== */
+.myspace-container {
+  max-width: 860px;
+  margin: 0 auto 20px auto;
+  background: rgba(14, 4, 26, 0.92);
+  border: 2px solid var(--border-color);
+  padding: 10px;
+  box-shadow: 0 0 25px rgba(255, 0, 127, 0.45), inset 0 0 15px rgba(0, 255, 204, 0.15);
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: 325px 1fr;
+  gap: 12px;
+  align-items: start;
+}
+
+@media (max-width: 760px) {
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.myspace-box {
+  background: var(--card-bg);
+  border: 2px solid var(--border-color);
+  margin-bottom: 12px;
+  box-shadow: 0 0 8px rgba(255, 51, 204, 0.25);
+}
+
+.box-header {
+  background: linear-gradient(90deg, var(--section-header-bg), #880e4f);
+  color: var(--section-header-text);
+  font-weight: bold;
+  font-size: 11px;
+  padding: 4px 8px;
+  border-bottom: 1px solid var(--border-color);
+  letter-spacing: 0.3px;
+  text-shadow: 1px 1px 0 #000000;
+}
+
+.orange-header {
+  background: linear-gradient(90deg, #ff007f, #6a1b9a, #00897b);
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   LEFT COLUMN: PROFILE CARD, ONLINE NOW, CONTACT BOX, MUSIC PLAYER
+   ========================================================================== */
+.profile-card-box {
+  padding: 8px;
+}
+
+.profile-name {
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--accent-gold);
+  margin: 0 0 8px 0;
+  text-shadow: 0 0 8px #ff007f, 1px 1px 0 #000;
+}
+
+.profile-main-info {
+  display: grid;
+  grid-template-columns: 155px 1fr;
+  gap: 8px;
+}
+
+.profile-pic-wrapper {
+  text-align: center;
+}
+
+#profile-pic {
+  width: 150px;
+  height: auto;
+  border: 2px solid var(--secondary-border-color);
+  box-shadow: 0 0 10px rgba(0, 255, 204, 0.45);
+  display: block;
+  margin: 0 auto 4px auto;
+}
+
+.pic-caption {
+  font-size: 9.5px;
+  color: var(--muted-text-color);
+  font-style: italic;
+  margin-bottom: 4px;
+}
+
+.view-my-links {
+  font-size: 10px;
+}
+
+.profile-headline {
+  font-family: "Comic Sans MS", Verdana, sans-serif;
+  font-weight: bold;
+  color: #ff99ee;
+  margin: 0 0 6px 0;
+}
+
+.stats-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 8px 0;
+}
+
+/* Iconic Blinking 2000s ONLINE NOW Badge */
+.online-now-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #062814;
+  border: 1px solid #00ff66;
+  padding: 2px 7px;
+  margin: 4px 0 8px 0;
+  box-shadow: 0 0 8px rgba(0, 255, 102, 0.5);
+}
+
+.online-text {
+  color: #00ff66;
+  font-weight: bold;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  animation: retroBlink 0.9s steps(2, start) infinite;
+}
+
+@keyframes retroBlink {
+  to { visibility: hidden; }
+}
+
+.last-login-block {
+  font-size: 10px;
+  color: var(--text-color);
+  border-top: 1px dashed rgba(255, 51, 204, 0.4);
+  padding-top: 5px;
+}
+
+/* Contact Grid */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  padding: 8px;
+}
+
+.contact-btn {
+  display: block;
+  text-decoration: none;
+  background: var(--card-alt-bg);
+  color: var(--link-color);
+  border: 1px solid var(--border-color);
+  padding: 4px 5px;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: left;
+  transition: transform 0.1s, background 0.15s;
+}
+
+.contact-btn:hover {
+  background: var(--section-header-bg);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+/* URL Box */
+.url-box {
+  padding: 6px 8px;
+  font-size: 10px;
+}
+
+.url-value {
+  color: var(--secondary-border-color);
+  word-break: break-all;
+}
+
+/* ==========================================================================
+   2006 MYSPACE FLASH-STYLE MUSIC PLAYER
+   ========================================================================== */
+.music-player-chrome {
+  background: linear-gradient(180deg, #3a3f47 0%, #1d2026 55%, #121317 100%);
+  border: 2px outset #9099a6;
+  padding: 7px;
+  color: #e0e6ed;
+}
+
+.player-display {
+  background: #06140e;
+  border: 2px inset #444;
+  padding: 6px 8px;
+  font-family: "Courier New", monospace;
+  color: #00ff99;
+  margin-bottom: 6px;
+}
+
+.player-status-line {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  margin-bottom: 3px;
+}
+
+.player-badge {
+  background: #ff007f;
+  color: #ffffff;
+  padding: 0 5px;
+  font-weight: bold;
+  font-size: 9px;
+}
+
+.player-song-marquee {
+  font-size: 11px;
+  font-weight: bold;
+  color: #ffff66;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.player-artist-line {
+  font-size: 9.5px;
+  color: #80ffd4;
+  margin-top: 2px;
+}
+
+.eq-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 18px;
+  margin-top: 5px;
+  padding-top: 2px;
+  border-top: 1px dotted #145238;
+}
+
+.eq-bars span {
+  flex: 1;
+  height: 4px;
+  background: linear-gradient(180deg, #ff00aa, #ffff00, #00ff66);
+  transition: height 0.15s ease;
+}
+
+.eq-bars.playing span:nth-child(odd) {
+  animation: eqBounce 0.42s infinite alternate ease-in-out;
+}
+.eq-bars.playing span:nth-child(even) {
+  animation: eqBounce 0.31s infinite alternate-reverse ease-in-out;
+}
+.eq-bars.playing span:nth-child(3n) {
+  animation-duration: 0.55s;
+}
+
+@keyframes eqBounce {
+  0% { height: 3px; }
+  100% { height: 16px; }
+}
+
+.player-controls-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+
+.mp-btn {
+  background: linear-gradient(180deg, #dcdcdc, #8c8c8c);
+  color: #111;
+  border: 2px outset #ffffff;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 2px 7px;
+}
+
+.mp-btn-primary {
+  background: linear-gradient(180deg, #00ffcc, #009977);
+}
+
+.mp-btn:active {
+  border-style: inset;
+}
+
+.volume-control {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-left: auto;
+}
+
+.volume-control input[type="range"] {
+  width: 65px;
+  accent-color: #ff007f;
+}
+
+.player-playlist {
+  background: #101218;
+  border: 1px inset #555;
+  max-height: 75px;
+  overflow-y: auto;
+}
+
+.playlist-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 6px;
+  font-size: 10px;
+  border-bottom: 1px solid #222834;
+  color: #cfd8dc;
+}
+
+.playlist-item:hover {
+  background: #2b123f;
+  color: #00ffcc;
+}
+
+.playlist-item.active {
+  background: #4a0e4e;
+  color: #ffd700;
+  font-weight: bold;
+}
+
+/* ==========================================================================
+   LEFT COLUMN TABLES (INTERESTS, DETAILS, SCHOOLS)
+   ========================================================================== */
+.myspace-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.myspace-table td {
+  border: 1px solid rgba(255, 51, 204, 0.45);
+  padding: 5px 6px;
+  vertical-align: top;
+  font-size: 10.5px;
+}
+
+.myspace-table td.label-cell {
+  width: 34%;
+  background: var(--card-alt-bg);
+  color: var(--accent-gold);
+  font-weight: bold;
+}
+
+.myspace-table td.value-cell {
+  background: var(--card-bg);
+  color: var(--text-color);
+}
+
+/* ==========================================================================
+   RIGHT COLUMN: NETWORK BANNER, BLOG, BLURBS
+   ========================================================================== */
+.extended-network-banner {
+  background: var(--card-alt-bg);
+  border: 2px solid var(--secondary-border-color);
+  text-align: center;
+  padding: 12px 10px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--accent-gold);
+  text-shadow: 0 0 8px #ff007f;
+}
+
+.extended-network-link {
+  color: var(--accent-gold);
+  text-decoration: none;
+}
+
+.extended-network-link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.blog-box {
+  padding: 8px 10px;
+}
+
+.blog-header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.blog-list {
+  margin: 0 0 6px 18px;
+  padding: 0;
+}
+
+.blog-list li {
+  margin-bottom: 4px;
+}
+
+.blurb-content {
+  padding: 8px 10px;
+}
+
+.blurb-subtitle {
+  color: var(--accent-gold);
+  font-size: 12px;
+  margin: 4px 0;
+}
+
+.blurb-body p {
+  margin: 0 0 8px 0;
+}
+
+.glitter-text {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  color: #ff66cc;
+  text-shadow: 0 0 6px #ff007f, 0 0 10px #00ffcc;
+}
+
+.ascii-divider {
+  color: var(--secondary-border-color);
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* ==========================================================================
+   PERSONALITY QUIZ SECTION (2000s Quizilla / MySpace Bulletin Style)
+   ========================================================================== */
+.quiz-header {
+  background: linear-gradient(90deg, #7b1fa2, #ff007f, #00bfa5);
+  font-size: 12px;
+  text-align: center;
+}
+
+.quiz-body {
+  padding: 10px;
+}
+
+.quiz-subtitle {
+  margin: 0 0 10px 0;
+  color: var(--muted-text-color);
+  text-align: center;
+  font-style: italic;
+}
+
+.quiz-question-card {
+  background: var(--card-alt-bg);
+  border: 1px solid var(--border-color);
+  padding: 7px 9px;
+  margin-bottom: 8px;
+}
+
+.quiz-question-prompt {
+  font-weight: bold;
+  color: var(--accent-gold);
+  margin-bottom: 5px;
+}
+
+.quiz-option-label {
+  display: block;
+  padding: 3px 4px;
+  margin-bottom: 2px;
+  border-radius: 2px;
+}
+
+.quiz-option-label:hover {
+  background: rgba(255, 0, 127, 0.22);
+}
+
+.quiz-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.retro-action-btn {
+  background: linear-gradient(180deg, #ff33cc, #990066);
+  color: #ffffff;
+  border: 2px outset #ffccff;
+  padding: 5px 12px;
+  font-family: Verdana, sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 #000;
+}
+
+.retro-action-btn:hover {
+  background: linear-gradient(180deg, #00ffcc, #008066);
+  color: #000000;
+  text-shadow: none;
+}
+
+.retro-secondary-btn,
+.mini-retro-btn {
+  background: var(--card-alt-bg);
+  color: var(--secondary-border-color);
+  border: 1px outset var(--secondary-border-color);
+  padding: 4px 8px;
+  font-size: 10px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.quiz-result-box {
+  margin-top: 12px;
+  background: #1d0630;
+  border: 2px dashed var(--accent-gold);
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+}
+
+.quiz-result-header {
+  font-size: 10px;
+  color: var(--secondary-border-color);
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.quiz-result-title {
+  font-size: 15px;
+  color: var(--accent-gold);
+  margin: 5px 0 8px 0;
+  text-shadow: 0 0 8px #ff007f;
+}
+
+.quiz-result-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.quiz-badge-img {
+  border: 2px solid var(--border-color);
+  max-width: 200px;
+}
+
+.quiz-embed-block {
+  text-align: left;
+  background: #11031c;
+  border: 1px solid var(--border-color);
+  padding: 7px;
+}
+
+.quiz-embed-block textarea {
+  width: 100%;
+  background: #06010a;
+  color: #00ff99;
+  border: 1px inset #555;
+  font-family: "Courier New", monospace;
+  font-size: 10px;
+  margin: 4px 0 6px 0;
+}
+
+.quiz-embed-btns {
+  display: flex;
+  gap: 8px;
+}
+
+/* ==========================================================================
+   TOP 8 FRIENDS GRID
+   ========================================================================== */
+.friends-subheader,
+.comments-subheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 6px 10px;
+}
+
+.count-highlight {
+  color: #ff3366;
+  font-weight: bold;
+}
+
+.top8-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  padding: 6px 10px 10px 10px;
+}
+
+@media (max-width: 520px) {
+  .top8-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.friend-card {
+  background: var(--card-alt-bg);
+  border: 1px solid rgba(255, 51, 204, 0.5);
+  padding: 5px;
+  text-align: center;
+  transition: transform 0.15s, border-color 0.15s;
+}
+
+.friend-card:hover {
+  transform: scale(1.04);
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.45);
+}
+
+.friend-name {
+  display: block;
+  font-size: 10px;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.friend-avatar {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border: 2px solid var(--secondary-border-color);
+  display: block;
+  margin: 0 auto 4px auto;
+}
+
+.friend-tagline {
+  font-size: 9px;
+  color: var(--muted-text-color);
+  margin-bottom: 2px;
+}
+
+.friend-online {
+  font-size: 9px;
+  color: #00ff66;
+  font-weight: bold;
+  animation: retroBlink 1s steps(2, start) infinite;
+}
+
+.view-all-friends {
+  text-align: right;
+  padding: 0 10px 8px 10px;
+}
+
+/* ==========================================================================
+   FRIENDS COMMENTS (THE WALL + HAPPY BIRTHDAY POST + GIF POSTS)
+   ========================================================================== */
+.comments-toolbar {
+  display: flex;
+  gap: 6px;
+}
+
+.comments-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.comments-table tr {
+  border-top: 2px solid var(--border-color);
+}
+
+.comment-author-cell {
+  width: 125px;
+  background: var(--card-alt-bg);
+  padding: 8px;
+  text-align: center;
+  vertical-align: top;
+  border-right: 1px solid var(--border-color);
+}
+
+.comment-author-cell img {
+  width: 78px;
+  height: 78px;
+  border: 2px solid var(--border-color);
+  display: block;
+  margin: 4px auto;
+}
+
+.comment-body-cell {
+  background: var(--card-bg);
+  padding: 8px 10px;
+  vertical-align: top;
+}
+
+.comment-date {
+  font-size: 9.5px;
+  color: var(--muted-text-color);
+  font-weight: bold;
+  margin-bottom: 6px;
+  border-bottom: 1px dotted rgba(255, 51, 204, 0.35);
+  padding-bottom: 3px;
+}
+
+/* Special Highlighted Happy Birthday Wall Post */
+.birthday-comment-row .comment-author-cell {
+  background: linear-gradient(180deg, #4a0e4e, #2b0530);
+}
+
+.birthday-comment-row .comment-body-cell {
+  background: linear-gradient(135deg, #2e063b 0%, #4a0942 50%, #1d052e 100%);
+  border: 2px dashed var(--accent-gold);
+  box-shadow: inset 0 0 18px rgba(255, 215, 0, 0.25);
+}
+
+.bday-banner {
+  background: linear-gradient(90deg, #ff007f, #ffd700, #00ffcc, #ff007f);
+  color: #1a0022;
+  font-family: "Comic Sans MS", Impact, sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  padding: 4px 8px;
+  margin-bottom: 6px;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 10px #ff007f;
+}
+
+.sparkle-line {
+  color: var(--accent-gold);
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0 0 6px #ff007f;
+}
+
+.wall-gif-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.wall-gif-img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid var(--secondary-border-color);
+  box-shadow: 0 0 10px rgba(0, 255, 204, 0.35);
+}
+
+/* Add a Comment Form */
+.add-comment-box {
+  background: var(--card-alt-bg);
+  border-top: 2px solid var(--secondary-border-color);
+  padding: 10px;
+}
+
+.add-comment-box h4 {
+  margin: 0 0 8px 0;
+  color: var(--accent-gold);
+  font-size: 12px;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 7px;
+}
+
+.form-row label {
+  min-width: 135px;
+  font-weight: bold;
+  color: var(--muted-text-color);
+}
+
+.form-row input[type="text"],
+.form-row select,
+.form-row textarea {
+  background: #0d0318;
+  color: #ffffff;
+  border: 1px solid var(--border-color);
+  padding: 4px 6px;
+  font-family: Verdana, sans-serif;
+  font-size: 11px;
+  flex: 1;
+}
+
+.bday-checkbox-label {
+  color: var(--accent-gold) !important;
+}
+
+/* ==========================================================================
+   FOOTER, MODAL, AND RETRO TOAST
+   ========================================================================== */
+.myspace-footer {
+  max-width: 860px;
+  margin: 0 auto 30px auto;
+  text-align: center;
+  font-size: 10px;
+  color: var(--muted-text-color);
+  padding: 10px;
+}
+
+.retro-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 0, 12, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5000;
+  padding: 15px;
+}
+
+.retro-modal-content {
+  width: 100%;
+  max-width: 520px;
+  background: var(--card-bg);
+  border: 3px ridge var(--border-color);
+  box-shadow: 0 0 30px rgba(255, 0, 127, 0.7);
+}
+
+.retro-modal-header {
+  background: linear-gradient(90deg, var(--section-header-bg), #4a0e4e);
+  color: #ffffff;
+  font-weight: bold;
+  padding: 6px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-close-btn {
+  background: #ff0044;
+  color: #fff;
+  border: 1px outset #fff;
+  font-weight: bold;
+}
+
+.retro-modal-body {
+  padding: 12px;
+}
+
+.config-form-grid {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.config-form-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-weight: bold;
+  color: var(--accent-gold);
+}
+
+.config-form-grid label.checkbox-row {
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+}
+
+.config-form-grid input[type="text"],
+.config-form-grid select {
+  background: #0c0217;
+  color: #ffffff;
+  border: 1px solid var(--secondary-border-color);
+  padding: 4px 6px;
+  font-size: 11px;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.retro-toast {
+  position: fixed;
+  bottom: 18px;
+  right: 18px;
+  z-index: 6000;
+  background: linear-gradient(135deg, #4a0e4e, #1a0526);
+  color: #ffffff;
+  border: 2px solid var(--accent-gold);
+  box-shadow: 0 0 18px rgba(255, 0, 127, 0.8);
+  padding: 10px 14px;
+  font-size: 11px;
+  max-width: 340px;
+}
